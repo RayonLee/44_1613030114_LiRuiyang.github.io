@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RayonLee's BLOG ABOUT</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/jquery.min.js"></script>
+    <style>
+        *{
+            margin:0;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <!-- 利用bootstrap来快速搭建导航栏 导航栏固定在顶部 -->
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top">
+            <!-- bootstrap的居中容器 -->
+            <div class="container">
+                <!-- 品牌图标：navbar-brand，设置了内边距和高度 -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" witdth="169" height="57" alt="logo">
+                    </a>
+                    <!-- 响应式布局：navbar-toggle 在屏幕分辨率小于768px的时候隐藏导航栏，用了另一个插件collapse -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+                        <span class="icon-bar"></span>    
+                        <span class="icon-bar"></span>    
+                        <span class="icon-bar"></span>    
+                    </button>
+                </div>  
+                <!-- 为了以后能够做响应式布局，在小分辨率的情况下导航栏变成图标，点击图标后展开，使用的是bootstrap的collapse插件 -->
+                <div class="navbar-collapse navbar-right collapse in" role="navigation">
+                    <form class="navbar-form navbar-left navbar-search" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default btn-circle" ><i class="glyphicon glyphicon-search"></i></button>
+                    </form>
+                    <ul class="nav navbar-nav">
+                        <li class="scroll">
+                            <a href="index.html" id="index">Home</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="Articles" href="Articles.html">Articles</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="Picture" href="Picture.html">Picture</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="Plan" href="Plan.html">Plan</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="About"  href="About.html">About</a>
+                        </li>
+                        <li  class="scroll">
+                            <a id="Contact" href="Contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="about">    
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center">
+                    ABOUT US
+                </h2>
+                <p class="text-center">
+                    "Meeting you is one of the best things in my life."
+                    <br>
+                    "I am so lucky to meet you."
+                    <br>
+                    —— RayonLee
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3 class="about-title">
+                       Ourselves
+                    </h3>
+                    <div class="about-img">
+                        <img src="images/about.JPG" class="img-responsive">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h3 class="about-title">
+                        Self Introduction
+                    </h3>
+                    <p>
+                        In 2016, we just entered the university. 
+                        We were assigned to the same class under the combination of fate. 
+                        She is from Hunan while I am from Shandong. 
+                        The distance of nearly a thousand kilometers is suddenly getting just so close, 
+                        so close that I noticed the cute girl in the first day.
+                    </p>
+
+                    <p>
+                        It is funny that our first year of college life provided us much more 
+                        colorful group activities than in the years to come. 
+                        We did not go through each other, even not an in-depth conversation. 
+                        I have never thought that the girl I can see every day in this class will have brought 
+                        unprecedented changes to my mentality and given me this special experience that I never had.
+                    </p>
+                    <p>
+                        In the second year of the university, we gradually became more connected. 
+                        I only found out that this girl around me has so many similarities with me. 
+                        She knew me, cared about me, and our distance was getting smaller. 
+                        Finally in the third year of college, we started this relationship.
+                    </p>
+                    <a href="#" class="btn btn-lg btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="music">
+        <div style="border-top:4px solid #eee">
+            <div class="container">
+                <div class="text-center music-block">
+                    <div class="music-info">
+                      <h2><span>Obstacles - Syd Matters</span></h2>
+                      <p>
+                            Just like this song, we walked through the seasons wearily.
+                            <br>
+                            We will cherish the time and each other.
+                            <br>
+                            And commemorate our best youth.
+                      </p>
+                    </div>
+                        <!-- html5的音频标准方法 -->
+                    <audio controls="controls" class="music-ctl" autoplay="autoplay" loop="loop">
+                        <source src="music/Obstacles.mp3" type="audio/mpeg">
+                    </audio> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="memory">
+        <div class="container">
+            <div class="text-center">
+                <div class="section-header">
+                    <h3 class="section-title">
+                        TO COMMEMORATE YOUTH
+                    </h3>
+                    <p style="color: #fff;">
+                        We don't know what will happen in the future. 
+                        <br>
+                        We can only grasp the present. 
+                        <br> 
+                        Whether it's a storm or a sunny day ahead of us,
+                        <br>
+                        we'll eventually see a rainbow. 
+                        <br>
+                        Even if we drag our tired bodies, 
+                        <br>
+                        we will look up to the stars every night with gratitude.
+                    </p>
+                    <br><br><br><br><br><br><br><br>
+                </div>   
+            </div>
+        </div>
+    </section>
+
+    <!-- 复用页尾 -->
+    <div id="page-footer"></div> 
+    <script>
+        $("#page-footer").load("footer.html");
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

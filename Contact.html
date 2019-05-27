@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RayonLee's BLOG CONTACT</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/jquery.min.js"></script>
+    <style>
+        *{
+            margin:0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 复用头部 -->
+    <!-- <div id="page-header"></div>    
+    <script>
+    $("#page-header").load("header.html");
+    </script> -->
+    <header id="header">
+        <!-- 利用bootstrap来快速搭建导航栏 导航栏固定在顶部 -->
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top">
+            <!-- bootstrap的居中容器 -->
+            <div class="container">
+                <!-- 品牌图标：navbar-brand，设置了内边距和高度 -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" witdth="169" height="57" alt="logo">
+                    </a>
+                    <!-- 响应式布局：navbar-toggle 在屏幕分辨率小于768px的时候隐藏导航栏，用了另一个插件collapse -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+                        <span class="icon-bar"></span>    
+                        <span class="icon-bar"></span>    
+                        <span class="icon-bar"></span>    
+                    </button>
+                </div>  
+                <!-- 为了以后能够做响应式布局，在小分辨率的情况下导航栏变成图标，点击图标后展开，使用的是bootstrap的collapse插件 -->
+                <div class="navbar-collapse navbar-right collapse in" role="navigation">
+                    <form class="navbar-form navbar-left navbar-search" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default btn-circle" ><i class="glyphicon glyphicon-search"></i></button>
+                    </form>
+                    <ul class="nav navbar-nav">
+                        <li class="scroll">
+                            <a href="index.html" id="index">Home</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="Articles" href="Articles.html">Articles</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="Picture" href="Picture.html">Picture</a>
+                        </li>
+                        <li class="scroll">
+                                <a id="Plan" href="Plan.html">Plan</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="About"  href="About.html">About</a>
+                        </li>
+                        <li  class="scroll">
+                            <a id="Contact" href="Contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="contact-wrapper">
+        <div class="contact-inner">
+            <div class="col-sm-7">
+                <div class="jumbotron contact-title">
+                    <h1>Contact Us!</h1>
+                    <p style="margin-top:35px;">If you have any thought or great suggestions about our life,
+                            future plan or even the wibsite design etc,please contact us.
+                            We will welcome to accept all your good ideas.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div id="contact-form-total" class="contact-ct">
+                    <div class="panel panel-default"> 
+                        <div class="panel-heading">
+                            <div class="panel-btns">
+                                <a href="#form-ct-c" role="button" class="panel-minimize" data-toggle="collapse">
+                                    <i class="fa fa-minus"></i>
+                                </a>
+                                <!-- 这里的href这么写很妙：首先是如果是#的话默认执行function后返回页面顶端，用viod（0）的方法
+                                就可以避免，其次url中不会出现#参数，这样写就避免使我写的navbar的选中js失效 -->
+                                <a href="javascript:void(0);" role="button" class="panel-close" onclick="contact_close()">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                            <h4 class="panel-title">Thanks you!</h4>
+                            <p>Please write down the relating information.</p>
+                        </div>
+                        <form action="post">
+                            <div id="form-ct-c">
+                                <div class="panel-body" class="collapse in">
+                                    <!-- 响应式布局按列排 -->
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <input type="text" placeholder="Name" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <input type="text" placeholder="Email" class="form-control">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <input type="text" placeholder="Tel" class="form-control">
+                                        </div>
+                                        <textarea class="form-control" style="width: 424.4px;margin-left:15px;  " placeholder="Advice" cols="30" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="checkbox">
+                                        <input type="checkbox" class="checkbox1">&nbsp&nbspAllow the secret rules.
+                                    </div>
+                                    <button class="btn btn-primary btn-lg">Send</button>
+                                </div>  
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- 清除浮动要不footer就飞上天了 -->
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+    <section id="get-in-touch">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center ">
+                    Get in Touch
+                </h2>
+                <p class="text-center">
+                    Thanks for viewing my blog. It's honor to show you our life and memory the beautiful
+                    moment.
+                    <br>
+                    "Life is beautiful. And have a good day."
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- 复用页尾 -->
+    <div id="page-footer"></div> 
+    <script>
+        $("#page-footer").load("footer.html");
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

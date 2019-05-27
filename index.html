@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RayonLee's BLOG INDEX</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+</head>
+<body> 
+    <!-- <div id="page-header"></div> 
+    <script>
+        $("#page-header").load("header.html");
+    </script> -->
+    <header id="header">
+        <!-- 利用bootstrap来快速搭建导航栏 导航栏固定在顶部 -->
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top">
+            <!-- bootstrap的居中容器 -->
+            <div class="container">
+                <!-- 品牌图标：navbar-brand，设置了内边距和高度 -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" witdth="169" height="57" alt="logo">
+                    </a>
+                    <!-- 响应式布局：navbar-toggle 在屏幕分辨率小于768px的时候隐藏导航栏，用了另一个插件collapse -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+                        <span class="icon-bar"></span>    
+                        <span class="icon-bar"></span>    
+                        <span class="icon-bar"></span>    
+                    </button>
+                </div>  
+                <!-- 为了以后能够做响应式布局，在小分辨率的情况下导航栏变成图标，点击图标后展开，使用的是bootstrap的collapse插件 -->
+                <div class="navbar-collapse navbar-right collapse in" role="navigation">
+                    <form class="navbar-form navbar-left navbar-search" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default btn-circle" ><i class="glyphicon glyphicon-search"></i></button>
+                    </form>
+                    <ul class="nav navbar-nav">
+                        <li class="scroll">
+                            <a href="index.html" id="index">Home</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="Articles" href="Articles.html">Articles</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="Picture" href="Picture.html">Picture</a>
+                        </li>
+                        <li class="scroll">
+                                <a id="Plan" href="Plan.html">Plan</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="About"  href="About.html">About</a>
+                        </li>
+                        <li  class="scroll">
+                            <a id="Contact" href="Contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="main-slider">
+        <!-- 官方文档示例仿写 -->
+        <div class="picshow owl-carousel owl-theme owl-loaded">
+            <div class="owl-stage-outer">
+                <div class="owl-stage">
+                    <div class="owl-item slider-boreder">
+                        <div class="imgsrc1 imgstyle">
+                            <div class="img-inner">
+                                <div class="container">
+                                    <!-- 响应式布局设置：多余的列另起一行 -->
+                                    <div class="row">
+                                        <!-- 采用栅格化响应式布局 -->
+                                        <div class="col-sm-5">
+                                            <div class="carousel-content">
+                                            
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <div class="carousel-content">
+                                                <h2>
+                                                    <strong>   
+                                                        Record    
+                                                        <span>Our</span> 
+                                                        Beautiful Time 
+                                                    </strong> 
+                                                </h2>
+                                                <h3>
+                                                    <span><strong>Positon: </strong></span>Changsha CN
+                                                </h3>
+                                                <h3>
+                                                    <span><strong>Date: </strong></span>Apr. 4th, 2019
+                                                </h3>
+                                                <p>This is a trip on the qingming festival. I went to my girlfriend's
+                                                    hometown, where we started a wonderful journey. I'd like to tell you more about it……
+                                                </p>
+                                                <a href="#" class="btn btn-primary btn-lg">Read More</a>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item slider-boreder">
+                        <div class="imgsrc2 imgstyle">
+                            <div class="img-inner">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-5"></div>
+                                        <div class="col-sm-7">
+                                            <div class="carousel-content"> 
+                                                <h2>
+                                                    <strong>THIS IS MY <span>GIRLFRIEND</span></strong>
+                                                </h2>
+                                                <h3>
+                                                    <span><strong>Position: </strong></span>Wuhan CN
+                                                </h3>
+                                                <h3>
+                                                    <span><strong>Date: </strong></span>May. 5, 2019 
+                                                </h3>
+                                                <p>
+                                                    This glamorous girl in a red kimono standing on the white sand is my girlfriend.
+                                                     This was the first time we went to such an experiential Japanese restaurant, and we took
+                                                    many beautiful photos. This afternoon, we went to Han-Street and spent the whole rest time there……
+                                                </p>
+                                                <a href="#" class="btn btn-lg btn-primary">Read More</a>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item slider-boreder">
+                        <div class="imgsrc3 imgstyle">
+                            <div class="img-inner">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-6"> 
+                                            <h2>
+                                                <strong>
+                                                    <span>FIRST MET</span><br>IN THE EAST LAKE
+                                                </strong>
+                                            </h2>
+                                            <h3>
+                                                <span><strong>Position: </strong></span> Wuhan CN
+                                            </h3>
+                                            <h3>
+                                                <span><strong>Date: </strong></span>Jan. 13th, 2019
+                                            </h3>
+                                            <p>
+                                                This experience beside the east lake next to wuhan university is something I will
+                                                never forget in my life. This memorable photo is the beginning of a rough and 
+                                                tormented relationship between me and her……
+                                            </p>
+                                            <a href="#" class="btn btn-lg btn-primary">Read More</a>
+                                        </div>
+                                        <div class="clearfix"></div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-controls clickable">
+                    <div class="owl-buttons">
+                        <!-- 这里使用伪元素来代替行内元素 -->
+                        <div class="owl-prev">
+                            <i class="fa fa-angle-left"></i>
+                        </div>
+                        <div class="owl-next">
+                            <i class="fa fa-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="shortblock">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h2>
+                        RayonLee loves Minna! She's the first love in my life. 
+                    </h2>
+                    <p>
+                        We are classmates in college. She's a cute girl that I thought the first time
+                        I met her in the class. But she'd got boyfriend already. So, I never thought to 
+                        get in touch with her. However, in the sophomore year, something happened to her
+                        and that made me and her a chance to get closer. If you want to know more about us,
+                         please click to view my girlfirend's website.
+                    </p>
+                </div>
+                <div class="col-sm-3 text-right">
+                    <a href="#" class="btn btn-primary btn-lg">Go To View</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <div id="page-footer"></div> 
+    <script>
+        $("#page-footer").load("footer.html");
+    </script>
+    
+    <script src="js/bootstrap.min.js"></script>
+    <!-- jquery幻灯片插件和它的内置插件(自动播放和动画效果) -,还需要引入两个css -->
+    <!-- 选用这个插件的原因一是使用方便二是响应式 -->
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/owl.autoplay.js"></script>
+    <!-- <script src="js/owl.animate.js"></script> -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RayonLee's Blog PICTURE</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <style>
+    *{
+        margin: 0;
+    }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <!-- 利用bootstrap来快速搭建导航栏 导航栏固定在顶部 -->
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top">
+            <!-- bootstrap的居中容器 -->
+            <div class="container">
+                <!-- 品牌图标：navbar-brand，设置了内边距和高度 -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" witdth="169" height="57" alt="logo">
+                    </a>
+                    <!-- 响应式布局：navbar-toggle 在屏幕分辨率小于768px的时候隐藏导航栏，用了另一个插件collapse -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+                        <span class="icon-bar"></span>    
+                        <span class="icon-bar"></span>    
+                        <span class="icon-bar"></span>    
+                    </button>
+                </div>  
+                <!-- 为了以后能够做响应式布局，在小分辨率的情况下导航栏变成图标，点击图标后展开，使用的是bootstrap的collapse插件 -->
+                <div class="navbar-collapse navbar-right collapse in" role="navigation">
+                    <form class="navbar-form navbar-left navbar-search" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default btn-circle" ><i class="glyphicon glyphicon-search"></i></button>
+                    </form>
+                    <ul class="nav navbar-nav">
+                        <li class="scroll">
+                            <a href="index.html" id="index">Home</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="Articles" href="Articles.html">Articles</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="Picture" href="Picture.html">Picture</a>
+                        </li>
+                        <li class="scroll">
+                                <a id="Plan" href="Plan.html">Plan</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="About"  href="About.html">About</a>
+                        </li>
+                        <li  class="scroll">
+                            <a id="Contact" href="Contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="picture">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center">
+                    Picture Wall
+                </h2>
+                <p class="text-center">
+                    Pictures recording our happy moment carry what will surport to live when we get older.
+                    <br>
+                    "We've been migratory animals, living under changing weather."
+                    <br>
+                    —— Syd Matters
+                </p>
+            </div>
+                    <!-- bootstrap的javascript插件标签页功能，来实现同一web的情况下不同模块之间转换
+            （官网文档解释：You can activate a tab or pill navigation without writing 
+            any JavaScript by simply specifying data-toggle="tab"or data-toggle="pill"on an element. ） -->
+        <div class="text-center">
+                <ul class="pic-filter" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#ours" aria-controls="ours" role="tab" data-toggle="tab" >
+                            ALL PICTURES
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#hers" aria-controls="hers" role="tab" data-toggle="tab">
+                            ABOUT HER
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#me"  aria-controls="me" role="tab" data-toggle="tab">ABOUT ME</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pic-items">
+                <div role="tabpanel" class="tab-pane fade in active" id="ours">
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/her1.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2019.3.7</h3>
+                                ZUEL WUHAN
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/me1.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2019.4.6</h3>
+                                CHANGSHA
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/her2.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2019.1.11</h3>
+                                HAN-STREET WUHAN
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/her3.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2019.4.7</h3>
+                                YUELU MOUNTAIN CHANGSHA
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/me2.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2019.4.6</h3>
+                                JUZIZHOU CHANGSHA
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/me3.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2019.3.14</h3>
+                                HANJIE WUHAN
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/her4.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2018.12.30</h3>
+                                ZUEL WUHAN
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/her5.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2019.5.5</h3>
+                                WUHAN
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="hers">
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/her1.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2019.3.7</h3>
+                                ZUEL WUHAN
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/her2.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2019.1.11</h3>
+                                HAN-STREET WUHAN
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/her3.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2019.4.7</h3>
+                                YUELU MOUNTAIN CHANGSHA
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/her4.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2018.12.30</h3>
+                                ZUEL WUHAN
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/her5.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2019.5.5</h3>
+                                WUHAN
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/her6.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2019.5.7</h3>
+                                ZUEL LIBRARY WUHAN
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/her7.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2019.4.26</h3>
+                                ZUEL WUHAN
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/her8.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2019.3.31</h3>
+                                SCIENCE PALACE WUHAN
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="me">
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/me1.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2019.4.7</h3>
+                                CHANGSHA
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/me2.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2019.4.6</h3>
+                                JUZIZHOU CHANGSHA
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pic-item">
+                        <div class="pic-item-inner">
+                            <img src="images/me3.JPG" class="img-responsive">
+                            <div class="pic-info">
+                                <h3>2019.3.14</h3>
+                                HANJIE WUHAN
+                                <a class="pic-preview" href="#">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+    <section id="view-more">
+        <div class="container"> 
+            <div class="text-center">
+                <h2>
+                    VIEW MORE
+                </h2>
+                <p>
+                    My girlfriend's pretty beautiful. That's why her photos are much more than mine.
+                    <br>
+                    If you want to learn more about my girlfriend's life,
+                    <br>
+                    just visit her website.
+                </p>
+                <p>
+                    <a href="#" class="btn btn-primary btn-lg">View More</a>
+                </p>
+                <img src="images/vbg-hand.png" class="img-responsive">
+            </div>
+        </div>
+    </section>
+
+    <div id="page-footer"></div> 
+    <script>
+        $("#page-footer").load("footer.html");
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

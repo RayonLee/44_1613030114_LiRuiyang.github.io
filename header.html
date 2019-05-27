@@ -1,0 +1,49 @@
+<header id="header">
+    <!-- 利用bootstrap来快速搭建导航栏 导航栏固定在顶部 -->
+    <nav id="main-menu" class="navbar navbar-default navbar-fixed-top">
+        <!-- bootstrap的居中容器 -->
+        <div class="container">
+            <!-- 品牌图标：navbar-brand，设置了内边距和高度 -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" witdth="169" height="57" alt="logo">
+                </a>
+                <!-- 响应式布局：navbar-toggle 在屏幕分辨率小于768px的时候隐藏导航栏，用了另一个插件collapse -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+                    <span class="icon-bar"></span>    
+                    <span class="icon-bar"></span>    
+                    <span class="icon-bar"></span>    
+                </button>
+            </div>  
+            <!-- 为了以后能够做响应式布局，在小分辨率的情况下导航栏变成图标，点击图标后展开，使用的是bootstrap的collapse插件 -->
+            <div class="navbar-collapse navbar-right collapse in" role="navigation">
+                <form class="navbar-form navbar-left navbar-search" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default btn-circle" ><i class="glyphicon glyphicon-search"></i></button>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li class="scroll">
+                        <a href="index.html" id="index">Home</a>
+                    </li>
+                    <li class="scroll">
+                        <a id="Articles" href="Articles.html">Articles</a>
+                    </li>
+                    <li class="scroll">
+                        <a id="Picture" href="Picture.html">Picture</a>
+                    </li>
+                    <li class="scroll">
+                        <a id="Plan" href="Plan.html">Plan</a>
+                    </li>
+                    <li class="scroll">
+                        <a id="About"  href="About.html">About</a>
+                    </li>
+                    <li  class="scroll">
+                        <a id="Contact" href="Contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

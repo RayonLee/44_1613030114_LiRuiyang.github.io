@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RayonLee's Blog ARTICLES</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <!-- ！！我发现头部不能用jquery的方式获得头部，应为document的所有element不能被及时加载渲染这样我的
+    导航栏动态选中功能getid就得不到有时候就会报错，怎么在没有好的前端架构的前提下引入header和footer（解决代码复用冗杂）是
+    以后要考虑的问题，在课堂作业中就先不解决了。关于footer一直是静态的，没有什么资源需要调动就还可以采用jquery加载这种方法 -->
+    <!-- <div id="page-header"></div> 
+    <script>
+        $("#page-header").load("header.html");
+    </script> -->
+    <header id="header">
+        <!-- 利用bootstrap来快速搭建导航栏 导航栏固定在顶部 -->
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top">
+            <!-- bootstrap的居中容器 -->
+            <div class="container">
+                <!-- 品牌图标：navbar-brand，设置了内边距和高度 -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" witdth="169" height="57" alt="logo">
+                    </a>
+                    <!-- 响应式布局：navbar-toggle 在屏幕分辨率小于768px的时候隐藏导航栏，用了另一个插件collapse -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+                        <span class="icon-bar"></span>    
+                        <span class="icon-bar"></span>    
+                        <span class="icon-bar"></span>    
+                    </button>
+                </div>  
+                <!-- 为了以后能够做响应式布局，在小分辨率的情况下导航栏变成图标，点击图标后展开，使用的是bootstrap的collapse插件 -->
+                <div class="navbar-collapse navbar-right collapse in" role="navigation">
+                    <form class="navbar-form navbar-left navbar-search" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default btn-circle" ><i class="glyphicon glyphicon-search"></i></button>
+                    </form>
+                    <ul class="nav navbar-nav">
+                        <li class="scroll">
+                            <a href="index.html" id="index">Home</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="Articles" href="Articles.html">Articles</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="Picture" href="Picture.html">Picture</a>
+                        </li>
+                        <li class="scroll">
+                                <a id="Plan" href="Plan.html">Plan</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="About"  href="About.html">About</a>
+                        </li>
+                        <li  class="scroll">
+                            <a id="Contact" href="Contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section id="article">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center">
+                    Record Our Life
+                </h2>
+                <p class="text-center">
+                    <strong>
+                        We are trying to record our every piece of life to memory this fantastic time. 
+                    </strong>   
+                    <br>
+                    "Ain't it funny how the best days of my life was all that wasted time" 
+                    <br>
+                    ——Keith Urban
+                </p>
+            </div>
+            <div class="row">
+                <!-- 适应不同分辨率 -->
+                <div class="col-md-3 col-sm-4 col-xs-6 team-column">
+                    <div class="article-member">
+                        <div class="article-img ">
+                            <img class="img-responsive" src="images/520.JPG">
+                        </div>
+                        <div class="article-info">
+                            <h3>520</h3>
+                            <span>ZUEL&nbsp&nbsp&nbsp2019.5.20</span>
+                        </div>
+                        <p>
+                            It happened recently. What is worthy to writing down this day is that 
+                            this special day belongs to lovers around the world is my first 520 day,
+                                which means I love you. Rayon&Minna
+                        </p>
+                        <button class="btn btn-primary btn-lg">
+                            Read More
+                        </button>
+                        <div class="article-clear-line"></div>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-wechat"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-qq"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-weibo"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 适应不同分辨率 -->
+                <div class="col-md-3 col-sm-4 col-xs-6 team-column">
+                    <div class="article-member">
+                        <div class="article-img ">
+                            <img class="img-responsive" src="images/yuelu.JPG">
+                        </div>
+                        <div class="article-info">
+                            <h3>Climb Mountain</h3>
+                            <span>Changsha Yuelu&nbsp&nbsp&nbsp2019.4.07</span>
+                        </div>
+                        <p>
+                            She doesn't like climbing mountain, even the mountain is not too high. However, she'd like to climb the 
+                            Yuelu Mountain with me when we traveled the first time, which moved me a lot.  
+                        </p>
+                        <button class="btn btn-primary btn-lg">
+                            Read More
+                        </button>
+                        <div class="article-clear-line"></div>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-wechat"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-qq"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-weibo"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-4 col-xs-6 team-column">
+                    <div class="article-member">
+                        <div class="article-img ">
+                            <img class="img-responsive" src="images/lib.JPG">
+                        </div>
+                        <div class="article-info">
+                            <h3>Study Together</h3>
+                            <span>ZUEL Library&nbsp&nbsp&nbsp2019.5.07</span>
+                        </div>
+                        <p>
+                            Of course we are the classmates. I used to believe 
+                            it's awkward to go out with someone you're easy to get close to,
+                             just like classmates. But, love is magic. Things just happened too fast.
+                        </p>
+                        <button class="btn btn-primary btn-lg">
+                            Read More
+                        </button>
+                        <div class="article-clear-line"></div>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-wechat"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-qq"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-weibo"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-4 col-xs-6 team-column">
+                    <div class="article-member">
+                        <div class="article-img ">
+                            <img class="img-responsive" src="images/lake.JPG">
+                        </div>
+                        <div class="article-info">
+                            <h3>Spring Hanging Out</h3>
+                            <span>ZUEL Lake&nbsp&nbsp&nbsp2019.3.07</span>
+                        </div>
+                        <p>
+                            After the winter holiday,we went back to school. She and I decided
+                            to have a spring outing at school. Oh, that day was girl's day. We
+                            bought losts of strawberries as gifts.
+                        </p>
+                        <button class="btn btn-primary btn-lg">
+                            Read More
+                        </button>
+                        <div class="article-clear-line"></div>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-wechat"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-qq"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-weibo"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="fact-fun">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center">
+                    Fun Facts
+                </h2>
+                <p class="text-center">
+                    We've spent a long time. Here's some facts show.
+                    <br>
+                    "My heart is open, I can't wait anymore no no."
+                    <br>
+                    ——Keith Urban
+                </p>
+            </div>
+            <div class="row text-center">
+                <div class="col-sm-3 col-xs-6">
+                    <div class="fact-number">
+                        169 DAYS
+                    </div>
+                    <strong>TIME TOGETHER</strong>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="fact-number">
+                        6 ARGUES
+                    </div>
+                    <STRONG>ARGUE TIMES</STRONG>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="fact-number">
+                        2 PLACES
+                    </div>
+                    <strong>PLACES VISITED</strong>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="fact-number">
+                        6 TIMES
+                    </div>
+                    <strong>FESTIVAL CELEBRATED TOGETHER</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="page-footer"></div> 
+    <script>
+        $("#page-footer").load("footer.html");
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

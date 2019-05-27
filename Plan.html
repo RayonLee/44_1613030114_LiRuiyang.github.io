@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RayonLee's Blog PLAN1</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="js/jquery.min.js"></script>
+    <style>
+        *{
+            margin:0;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <!-- 利用bootstrap来快速搭建导航栏 导航栏固定在顶部 -->
+        <nav id="main-menu" class="navbar navbar-default navbar-fixed-top">
+            <!-- bootstrap的居中容器 -->
+            <div class="container">
+                <!-- 品牌图标：navbar-brand，设置了内边距和高度 -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.png" witdth="169" height="57" alt="logo">
+                    </a>
+                    <!-- 响应式布局：navbar-toggle 在屏幕分辨率小于768px的时候隐藏导航栏，用了另一个插件collapse -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> 
+                        <span class="icon-bar"></span>    
+                        <span class="icon-bar"></span>    
+                        <span class="icon-bar"></span>    
+                    </button>
+                </div>  
+                <!-- 为了以后能够做响应式布局，在小分辨率的情况下导航栏变成图标，点击图标后展开，使用的是bootstrap的collapse插件 -->
+                <div class="navbar-collapse navbar-right collapse in" role="navigation">
+                    <form class="navbar-form navbar-left navbar-search" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default btn-circle" ><i class="glyphicon glyphicon-search"></i></button>
+                    </form>
+                    <ul class="nav navbar-nav">
+                        <li class="scroll">
+                            <a href="index.html" id="index">Home</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="Articles" href="Articles.html">Articles</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="Picture" href="Picture.html">Picture</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="Plan" href="Plan.html">Plan</a>
+                        </li>
+                        <li class="scroll">
+                            <a id="About"  href="About.html">About</a>
+                        </li>
+                        <li  class="scroll">
+                            <a id="Contact" href="Contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="plan">   
+        <div class="container">
+            <div class="section-header">
+                <div class="text-center">
+                    <h2 class="section-title">
+                        FUTURE PLAN
+                    </h2>
+                    <p>
+                        Here's our future plan. We will get a bright future.
+                        <br>
+                        "All I know is you've shown me it's a beautiful world."
+                        <br>
+                        —— Westlife
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="images/plan.JPG" class="img-responsive">
+                </div>
+                <div class="col-sm-6">
+                    <div class="table-responsive">
+                        <table class="table table-info mb30  table-hover">
+                            <thead>
+                                <tr>
+                                    <th>NO.</th>
+                                    <th>DATE</th>
+                                    <th>TARGET</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2019.06.10</td>
+                                    <td>Internship</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2019.07.01</td>
+                                    <td>Travel To Another City</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>2019.07.20</td>
+                                    <td>Climb Wudang Mountain</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>2019.08.02</td>
+                                    <td>My Girlfriend's Birthday</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>2019.08.15</td>
+                                    <td>Accompanying Parents</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>2019.09.01</td>
+                                    <td>Review</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>2019.9.30</td>
+                                    <td>Birthday</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>2019.12.24</td>
+                                    <td>Postgraduate Entrance Examination</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>2020.05.01</td>
+                                    <td>Travel Northwest China</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 复用页尾 -->
+    <div id="page-footer"></div> 
+    <script>
+        $("#page-footer").load("footer.html");
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

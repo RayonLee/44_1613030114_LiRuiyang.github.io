@@ -1,0 +1,711 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* 导航栏位置预留 */
+    padding-top: 100px;
+    background: #fff;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #64686d;
+    line-height: 26px;
+}
+
+a:hover,a:focus{
+    text-decoration: none;
+}
+/* 样式重写使之能够更加个性化展示 */
+
+#main-menu.navbar-default{
+    background: rgba(255,255,255,1);
+    margin-bottom: 0;
+    border-radius: 0;
+    border:0;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar.navbar-default .navbar-brand{
+    height: auto;
+    padding: 22px 15px 21px;
+}
+
+#main-menu.navbar-default .navbar-nav>li.scroll>a {
+    /* border-top:3px solid #45aed6; */
+    padding-top: 37px;
+    background: transparent;
+}
+
+#main-menu.navbar.navbar-default .navbar-nav>li.scroll>a:hover{
+    border-top:3px solid #45aed6;
+}
+/* 锁定导航栏，使导航栏有当前页面的选中效果，用js实现 */
+.lock-navbar-choose{
+    border-top:3px solid #45aed6;
+}
+#main-menu.navbar-default .navbar-form{
+    padding-top:22px;
+    padding-right:20px;
+}
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center ;
+    font-size: 12px;
+    line-height: 1.42857 ;
+}
+
+.navbar.navbar-default .navbar-toggle{
+    margin-top:32px;
+}
+
+/* 图片正文部分 */
+#main-slider{
+    overflow: hidden;
+}
+
+.imgsrc1{
+    background-image:url(../images/together1.JPG) ;
+}
+.imgsrc2{
+    background-image:url(../images/together2.JPG) ;
+}
+.imgsrc3{
+    background-image:url(../images/together3.JPG) ;
+}
+.imgstyle{
+    height: 558px;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: cover;
+}
+
+/* 图片左右导航栏 */
+#main-slider .owl-prev{
+    left:-35px;
+    text-indent:14px;
+}
+#main-slider .owl-next{
+    right: -35px;
+    text-indent: -14px;
+}
+#main-slider .owl-prev,#main-slider .owl-next{
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 30px;
+    display: inline-block;
+    margin-top: -35px;
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 100px;
+    z-index: 5;
+    -webkit-transition: background-color 400ms;
+    transition: background-color 400ms;
+}
+#main-slider .owl-prev:hover,#main-slider .owl-next:hover{
+    background-color: #45aed6;
+}
+.fa{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.fa-angle-left:before{
+    content:"\f104";
+}
+.fa-angle-right:before{
+    content:"\f105";
+}
+/* 照片正文内部内容 */
+
+#main-slider .img-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+#main-slider .img-inner h2{
+    margin-top: 180px;
+    font-size: 36px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+    padding-left: 60px;
+}
+#main-slider .img-inner h2 strong>span{
+    color: #45aed6;
+}
+#main-slider .img-inner h3>span{
+    color: #66ccff
+}
+#main-slider .img-inner h3{
+    margin:0 auto;
+    padding-top:4px;
+    padding-left:60px;
+}
+#main-slider .img-inner p{
+    margin:0 auto;
+    padding-left:60px;
+    margin-top:10px;
+    line-height: 26px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* 这里是响应式布局css3的media query写法，这是我通过
+浏览器调整自己试出来的，当三张图片分辨率分别小与一定值的时候，
+图片上的文字会隐藏不重要的部分来保证主题部分存在，由于不同图片的文字数量不同所以缩放分辨率也不同 */
+@media screen and (max-width: 387px){
+    #main-slider .imgsrc1 .img-inner p{
+        display: none;
+    }
+}
+@media screen and (max-width: 475px){
+    #main-slider .imgsrc2 .img-inner p{
+        display: none;
+    }
+}
+@media screen and (max-width: 431px){
+    #main-slider .imgsrc3 .img-inner p{
+        display: none;
+    }
+}
+/* 按钮格式 */
+#main-slider .btn,#contact-wrapper .btn{
+    border-width: 0;
+    border-bottom-width: 3px;
+    border-radius: 3px;
+}
+
+#main-slider .img-inner .btn{
+    margin-top: 15px; 
+    border-color: #2a95be;
+    background-color:#45aed6;
+    margin-left:60px;
+}
+/* contact的按钮设计 */
+#contact-wrapper .btn{
+    border-color: #2a95be;
+    background-color:#45aed6;
+    margin-left:30px;
+    font-size:14px;
+    padding:8px 16px;
+}
+/* 最后在写个图片的底部分割线 */
+ #main-slider .slider-boreder{
+    border-bottom: 3px solid #45aed6;
+} 
+
+/* 灰色子块 */
+#cta{
+    padding:50px 0;
+    background-color:#eeeeee; 
+}
+#cta h2{
+    margin-top: 0;
+    font-weight: 600;
+    color:#333;
+}
+
+#cta .btn{
+    border-width: 0;
+    border-bottom-width: 3px;
+    border-radius: 3px;
+    margin-top: 40px;
+    border-color: #2a95be ! important;
+    background-color: #45aed6;
+}
+
+/* 页脚 */
+
+#footer{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #fff;
+    background: #2e2e2e;
+    display: block;
+}
+#footer ul{
+    list-style: none;
+    padding:0;
+    margin:0 -7.5px;
+
+}
+@media only screen and (min-width:768px){
+    #footer .social-icons {
+        float:right;
+    }
+}
+#footer ul>li{
+    display: block;
+    margin:0 7.5px;
+    float:right;
+}   
+
+
+
+#footer a{
+    color: #fff;
+} 
+#contact-wrapper .jumbotron{
+    padding-left: 60px;
+    padding-right: 20px;
+    margin: 0;
+    background-color: transparent;
+}
+#contact-wrapper .contact-inner{
+    opacity:0.8;
+    background-image: url(../images/contact.JPG);
+    background-size: cover;
+    height: 450px;
+}
+#contact-wrapper .jumbotron p, #contact-wrapper .jumbotron h1{
+    color: #eee;
+}
+#contact-wrapper .panel{
+    margin:20px 20px;;
+}
+#contact-wrapper .panel-heading{
+    color: #41464d;
+    border-color: #e7e7e7;
+    border-bottom: 1px solid transparent;
+    background-color: #f9f9f9;
+    padding: 18px 20px 20px 20px;
+    position: relative;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    display: block;
+}
+#contact-wrapper .panel .pannel-title{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+    line-height: normal;
+}
+#contact-wrapper .panel .panel-heading p{
+    color: #77818e;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    line-height: 18px;
+}
+#contain-wrapper .panel-body{
+    padding: 20px;
+    display: block;
+}
+#contain-wrapper .panel-body .form-control{
+    border-radius: 3px;
+    padding: 10px;
+    height: auto;
+    box-shadow: none;
+    font-size: 13px;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#contact-wrapper  .panel-footer{
+    display: block;
+    padding:12px 20px;
+    background: #f7f7f7;
+    border-color: #ddd;
+}
+#contact-wrapper .checkbox{
+    display: block;
+    margin-left:50px;
+}
+#contact-wrapper input.checkbox1{
+    line-height: normal;
+    width:18px;
+    height:18px;
+}   
+#get-in-touch{
+    padding:100px 0 100px;
+    background-image:linear-gradient(90deg,#2caab3 0%,#2c8cb3 100%);
+    color: #fff;
+}
+.section-header .section-title::before{
+    content: "";
+    position: absolute;
+    width: 140px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -70px;
+    height: 1px;
+    background: #ebebeb;
+}
+.section-header .section-title::after{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: -11px;
+    left: 50%;
+    margin-left: -12px;
+    border: 5px solid #fff;
+    border-radius: 20px;
+    background: #45aed6;
+}
+.section-header .section-title{
+    font-size: 44px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 0 20px;
+}
+/* contact界面有点影响界面美观于是想用按钮实现隐藏或关闭功能 */
+.contact-ct:hover .panel-btns{
+    display: block;
+}
+.panel-btns{
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.panel-btns a{
+    font-size: 11px;
+    color: #999;
+    padding: 3px 4px;
+    border: 1px solid #bbb;
+    line-height: 10px;
+    border-radius: 50px;
+    display: inline-block;
+}
+#contact-form-total{
+    display: block;
+}
+#article{
+    padding:70px 0;
+}
+#article .section-header{
+    margin-bottom: 50px;
+}
+#article .section-header .section-title{
+    font-size: 44px;
+    color: #272727;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 0 20px;
+}
+#article .section-header .section-title::before{
+    content: "";
+    position: absolute;
+    width: 140px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -70px;
+    height: 1px;
+    background: #ebebeb;
+}
+#article .section-header .section-title::after{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: -11px;
+    left: 50%;
+    margin-left: -12px;
+    border: 5px solid #fff;
+    border-radius: 20px;
+    background: #45aed6;
+}
+#article .article-member{
+    padding: 13px;
+    background: #eeeeee;
+    border: 2px solid #eeeeee;
+}
+#article .article-member .article-img{
+    margin: -15px -15px 0 -15px;
+}
+#article .article-member .article-info{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 10px;
+}
+#article h3{
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: #272727;
+}
+#article .article-member>button{
+    border:0px;
+    background: #222534;
+}
+#article .article-member:hover>button,#article .article-member:hover .social-icons a{
+    background:#45AED6;
+}
+#article .article-member:hover{
+    border-color:#45AED6;
+}
+#article .article-clear-line{
+    margin-top:10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dbdbdb;
+}
+#article .social-icons{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#article .social-icons>li{
+    display: inline-block;
+}
+#article .social-icons>li>a{
+    display: block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    background: #222534;
+    border-radius: 3px;
+}
+#fact-fun{
+    padding: 100px 0 70px;
+    background:black;
+    opacity: 0.8;
+    background-size: cover;
+    color: #fff;
+}
+#fact-fun .fact-number{
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    font-size: 24px;
+    line-height: 140px;
+    border: 3px solid #fff;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+#fact-fun strong{
+    display: block;
+    margin-bottom: 30px;
+}
+#picture{
+    padding: 70px 0;
+    background: #f5f5f5;
+}
+#picture .section-header{
+    margin-bottom: 50px;
+}
+#picture .section-title{
+    font-size: 44px;
+    color: #272727;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 0 20px;
+}
+#picture .pic-filter{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 50px;
+    display: inline-block;
+}
+#picture .pic-filter>li{
+    float:left;
+    display: block;
+}
+#picture .pic-filter>li a{
+    display: block;
+    padding: 7px 15px;
+    background: #e5e5e5;
+    color: #64686d;
+    position: relative;
+}
+/* 打磨角 */
+#picture .pic-filter>li:first-child a,#picture .pic-filter>li:first-child{
+    border-radius:4px 0 0 4px;
+}
+#picture .pic-filter>li:last-child a,#picture .pic-filter>li:last-child{
+    border-radius: 0 4px 4px 0;
+}
+#picture .pic-filter>li a:hover,#picture .pic-filter>li.active{
+    background: #45aed6;
+    color: #fff;
+}
+ #picture .pic-filter>li.active a{
+    background: #45aed6;
+    color: #fff;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #318daf;
+} 
+#picture .pic-filter>li.active::after{
+    content: " ";
+    position: absolute;
+    margin-left: -10px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #318daf transparent transparent transparent;
+}
+#picture .pic-item{
+    /* position: absolute; */
+    left: 0px;
+    top: 0px;
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
+    opacity: 1;
+    width: 24.9%;
+    float: left;
+    padding: 15px;
+}
+#picture .pic-item .pic-item-inner{
+    position: relative;
+}
+#picture .pic-item .pic-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: none;
+}
+#picture .pic-item .pic-info h3{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
+    color: #fff;
+}
+#picture .pic-item .pic-info .pic-preview{
+    position: absolute;
+    top: -18px;
+    right: 12px;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%);
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 0 2px #fff;
+}
+#picture .pic-item .pic-item-inner:hover .pic-info{
+    display: block;
+}
+#view-more{
+    background: #242a33 url(../images/vbg.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    color: #fff;
+    padding-top: 70px;
+}
+#view-more h2{
+    color: #fff;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 1;
+}
+#view-more .btn{
+    border-color: #2a95be;
+    background-color:#45aed6;
+    border-width: 0;
+    border-bottom-width: 3px;
+    border-radius: 3px;
+}
+#about{
+    padding: 70px 0;
+    
+}
+#about .section-header{
+    margin-bottom: 50px;
+}
+#about .section-header .section-title{
+    font-size: 44px;
+    font-weight: 600;
+    color: #272727;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 0 20px;
+}
+#about .about-title{
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+    position: relative;
+    font-weight: 600;
+    color: #272727;
+}
+#about .about-title::after{
+    content: " ";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 40%;
+    border-bottom: 1px solid #45aed6;
+}
+#about a.btn{
+    margin-top: 2px;
+    margin-left:424px; 
+}
+#about .btn{
+    border-color: #2a95be;
+    background-color:#45aed6;
+    border-width: 0;
+    border-bottom-width: 3px;
+    border-radius: 3px;
+}
+#memory{
+    background-image:url(../images/star.jpg); 
+    background-size: cover;
+    padding-top: 180px;
+}
+#music{
+    border-top: 2px solid #45aed6; 
+    border-bottom: 2px solid #030333;
+}
+#music .music-block{
+    margin:20px auto; 
+}
+#music .music-block h2{
+    color:#45aed6;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1;
+}
+#music .music-info{
+    margin-bottom: 40px;
+}
+#memory h3{
+    color:#fff;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 1;
+
+}
+#plan{
+    padding: 70px 0;
+}
+#plan .section-title{
+    font-size: 44px;
+    color: #272727;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 0 20px;
+}
+#plan .section-header{
+    margin-bottom:50px; 
+}
+#plan .table-info thead tr th{
+    background-color:#5BC0DE; 
+    color:#fff;
+    border-bottom:0;
+}
+#plan .table-info tbody tr td{
+    color:black;
+}
